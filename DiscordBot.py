@@ -17,8 +17,6 @@ except ImportError:
 import discord
 
 #class discord_bot():
-    
-
 
 def save_roles():
     with open("roles.conf", "w") as file:
@@ -50,7 +48,7 @@ try:
         channelsDict = json.load(confFile)
 except:
     open("channel.conf", "x")
-    channelsDict = {"rolesChannel": 0, "logChannel": 0, "configChannel": 0}
+    channelsDict = {"rolesChannel": 0, "logChannel": 0, "configChannel": 0, "privateChannel": 0, "generalChannel": 0}
     save_channels()
 
 try:
