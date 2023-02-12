@@ -1,6 +1,20 @@
-import discord
+from asyncio.windows_events import NULL
+from pickle import NONE
+#import discord
 import json
 from discord.ext import commands
+
+import subprocess
+import sys
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+try: 
+    import discord
+except ImportError:
+    install("discord.py")
+
+import discord
 
 #class discord_bot():
     
@@ -54,7 +68,8 @@ except:
     settingsDict = {"prefix": "!", "playedGame": "someGame"}
     save_settings()
 
-bot = commands.Bot(command_prefix=settingsDict["prefix"])
+intents = discord.Intents.default()
+bot = commands.Bot(command_prefix=settingsDict["prefix"], intents=intents)
 
 get_channel = lambda c: bot.get_channel(c)
 
