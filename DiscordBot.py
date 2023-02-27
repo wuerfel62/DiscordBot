@@ -1,6 +1,5 @@
 #import discord
 import json
-from discord.ext import commands
 
 import subprocess
 import sys
@@ -13,6 +12,7 @@ except ImportError:
     install("discord.py")
 
 import discord
+from discord.ext import commands
 
 #class discord_bot():
 
