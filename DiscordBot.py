@@ -71,7 +71,7 @@ try:
 except:
     open("user.conf", "x")
 
-intents = discord.Intents.default()
+intents = discord.Intents.all()
 bot = commands.Bot(command_prefix=settingsDict["prefix"], intents=intents)
 
 get_channel = lambda c: bot.get_channel(c)
