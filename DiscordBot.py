@@ -1,5 +1,3 @@
-from asyncio.windows_events import NULL
-from pickle import NONE
 #import discord
 import json
 from discord.ext import commands
